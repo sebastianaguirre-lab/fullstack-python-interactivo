@@ -21,7 +21,7 @@ Pull Request:
 - Solicitud para fusionar cambios.
 
 Fork:
-- Copia de un repositorio ajeno.
+- Copia de un repositorio ajeno (se copia en GitHub).
 
 ---
 
@@ -46,11 +46,11 @@ GitHub
 ## Comandos que usare siempre
 
 ```bash
-git status
-git add .
+git status (detectar cambios)
+git add . (guardar cambios)
 git commit -m "mensaje"
-git push
-git pull
+git push (y luego pull request en GitHub)
+git pull (para descargar los cambios)
 ```
 
 ---
@@ -155,22 +155,6 @@ Corregir el ultimo commit:
 ```bash
 git commit --amend -m "nuevo mensaje"
 ```
-
----
-
-## Pull Request rapido
-
-```bash
-git switch -c nueva-rama
-git add .
-git commit -m "cambio realizado"
-git push -u origin nueva-rama
-```
-
-Luego en GitHub:
-- Crear Pull Request.
-- Revisar cambios.
-- Fusionar con `main`.
 
 ---
 
