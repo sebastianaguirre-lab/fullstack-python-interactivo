@@ -687,6 +687,44 @@ contador = aumentar(contador)
 print(contador) #R: 1
 ```
 
+### Funciones que modifican en el lugar
+
+Algunas funciones modifican directamente el objeto recibido y devuelven `None`.
+
+`random.shuffle()` mezcla una lista en el lugar.
+
+```python
+import random
+
+lista = [1, 2, 3]
+random.shuffle(lista)
+
+print(lista) # La lista queda desordenada
+```
+
+No se debe guardar el resultado de `shuffle()`.
+
+```python
+lista = random.shuffle(lista)
+print(lista) #None
+```
+
+Ejemplo correcto:
+
+```python
+def shuffle_alt(pregunta):
+    random.shuffle(pregunta["alternativas"])
+    return pregunta["alternativas"]
+```
+
+Si se escribe:
+
+```python
+pregunta["alternativas"] = random.shuffle(pregunta["alternativas"])
+```
+
+primero se mezcla la lista, pero despues `pregunta["alternativas"]` queda valiendo `None`.
+
 ## 11. Listas
 
 Las listas guardan varios elementos y se accede a ellos por posicion.
