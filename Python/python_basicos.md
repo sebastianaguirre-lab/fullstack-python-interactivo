@@ -4,6 +4,29 @@ Mini guia personal de Python con ejemplos ordenados, explicacion breve y resulta
 
 > Nota: en el archivo original, la seccion de comprehensions usa `claves`, `valores` y `numeros` sin definir. En esta guia se agregan valores de ejemplo para que el codigo sea ejecutable.
 
+## Indice
+
+1. [`print()`](#1-print)
+2. [Variables](#2-variables)
+3. [Tipos de datos](#3-tipos-de-datos)
+4. [Operaciones matematicas](#4-operaciones-matematicas)
+5. [Strings](#5-strings)
+6. [`input()`](#6-input)
+7. [Condicionales](#7-condicionales)
+8. [`for`](#8-for)
+   - [Comprehensions](#comprehensions)
+9. [`while`](#9-while)
+10. [Funciones](#10-funciones)
+11. [Listas](#11-listas)
+12. [Tuplas](#12-tuplas)
+13. [Sets](#13-sets)
+14. [Diccionarios](#14-diccionarios)
+15. [Librerias](#15-librerias)
+16. [Modularizacion](#16-modularizacion)
+    - [Refactorizacion](#refactorizacion)
+17. [Experiencia de usuario](#17-experiencia-de-usuario)
+18. [Programacion orientada a objetos](#18-programacion-orientada-a-objetos)
+
 ## 1. `print()`
 
 `print()` sirve para mostrar informacion en consola.
@@ -1090,4 +1113,149 @@ os.system("clear")
 
 ```python
 exit()
+```
+
+## 18. Programacion orientada a objetos
+
+La programacion orientada a objetos permite organizar datos y acciones relacionadas dentro de clases.
+
+| Concepto | Que significa |
+| --- | --- |
+| Clase | Molde que define las caracteristicas y acciones de un tipo de objeto. |
+| Objeto o instancia | Elemento concreto creado a partir de una clase. |
+| Atributo | Caracteristica o dato perteneciente a una clase u objeto. |
+| Metodo | Funcion definida dentro de una clase. |
+
+### Clase, atributo y metodo estatico
+
+```python
+# CLASE:
+# Es el molde que se utiliza para crear objetos de tipo Te.
+# Los nombres de clases se escriben en PascalCase.
+class Te:
+
+    # ATRIBUTO DE CLASE:
+    # Es una caracteristica compartida por todos los objetos de tipo Te.
+    # Se usa de esta forma porque todos los tipos de te duran 365 dias.
+    duracion = 365
+
+    # DECORADOR:
+    # Indica que obtener_precio es un metodo estatico.
+    # Permite usar el metodo directamente desde la clase,
+    # sin crear primero un objeto de tipo Te.
+    @staticmethod
+
+    # METODO ESTATICO:
+    # Es una funcion definida dentro de una clase.
+    # Recibe el formato del te y retorna su precio.
+    def obtener_precio(formato):
+
+        # Comprueba si el formato ingresado es de 300 gramos.
+        if formato == 300:
+
+            # Retorna el precio del formato de 300 gramos.
+            return 3000
+
+        # El ejercicio permite asumir que la otra opcion es 500 gramos.
+        else:
+
+            # Retorna el precio del formato de 500 gramos.
+            return 5000
+```
+
+### Crear un objeto
+
+```python
+# OBJETO O INSTANCIA:
+# Te() crea un objeto concreto utilizando la clase Te como molde.
+# te_negro guarda ese objeto para poder utilizarlo posteriormente.
+te_negro = Te()
+
+# Accede al atributo de clase mediante el objeto.
+print(te_negro.duracion)
+
+# Tambien se puede acceder directamente desde la clase.
+print(Te.duracion)
+```
+
+Ambos `print()` muestran `365` porque `duracion` es compartido por todas las instancias de `Te`.
+
+### Llamar un metodo estatico
+
+```python
+# El metodo se llama desde la clase porque utiliza @staticmethod.
+# El argumento 300 se almacena en el parametro formato.
+precio = Te.obtener_precio(300)
+
+# Muestra el valor retornado por el metodo.
+print(precio)
+```
+
+Resultado:
+
+```text
+3000
+```
+
+### Metodo que retorna varios valores
+
+Un metodo puede retornar mas de un valor. Estos se pueden guardar en variables separadas.
+
+```python
+class Te:
+
+    @staticmethod
+    def obtener_datos(sabor):
+        if sabor == 1:
+            return 3, "Se recomienda consumir al desayuno"
+
+
+# Cada valor retornado se almacena en una variable.
+tiempo, recomendacion = Te.obtener_datos(1)
+
+print(tiempo)
+print(recomendacion)
+```
+
+Resultado:
+
+```text
+3
+Se recomienda consumir al desayuno
+```
+
+### Importar una clase
+
+Si la clase se encuentra en otro archivo, debe importarse antes de utilizarla.
+
+```python
+# Archivo te.py
+class Te:
+    duracion = 365
+```
+
+```python
+# Archivo pedido.py
+
+# te corresponde al archivo te.py.
+# Te corresponde a la clase que se desea importar.
+from te import Te
+
+pedido = Te()
+print(pedido.duracion)
+```
+
+Estructura basica para recordar:
+
+```python
+class NombreClase:
+    atributo_de_clase = valor
+
+    @staticmethod
+    def nombre_metodo(parametro):
+        return resultado
+
+
+objeto = NombreClase()
+resultado = NombreClase.nombre_metodo(argumento)
 ```
