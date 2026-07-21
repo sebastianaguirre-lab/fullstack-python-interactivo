@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo de librerias web</title>
+    <meta name="description" content="Catalogo visual para entender que aporta Google Fonts, Bootstrap y Font Awesome a una pagina web.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#inicio">
+          <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+          Librerias Web
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#fonts">Fonts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#bootstrap">Bootstrap</a></li>
+            <li class="nav-item"><a class="nav-link" href="#icons">Iconos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#referencias">Referencias</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="inicio">
+      <div class="container">
+        <p class="eyebrow">Guia visual para proyectos web</p>
+        <h1>Que puedes construir con estas librerias</h1>
+        <p class="hero-copy">
+          Mira cada recurso en accion: tipografias para dar personalidad, componentes listos,
+          grillas responsivas e iconos para que una pagina se entienda rapido.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#fonts">
+            <i class="fa-solid fa-eye" aria-hidden="true"></i>
+            Ver ejemplos
+          </a>
+          <a class="btn btn-outline-light btn-lg" href="#mapa">
+            <i class="fa-solid fa-compass" aria-hidden="true"></i>
+            Mapa rapido
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-band compact" id="mapa">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Vista rapida</p>
+            <h2>Elige la herramienta segun lo que quieres lograr</h2>
+          </div>
+          <div class="row g-3 quick-map">
+            <div class="col-md-6 col-xl-3">
+              <article class="tool-card">
+                <i class="fa-solid fa-heading"></i>
+                <h3>Titulos con caracter</h3>
+                <p>Google Fonts y Barlow Condensed ayudan a crear encabezados fuertes, deportivos o editoriales.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="tool-card">
+                <i class="fa-solid fa-table-cells-large"></i>
+                <h3>Layout ordenado</h3>
+                <p>Bootstrap resuelve columnas, espacios, navegacion y comportamiento responsive.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="tool-card">
+                <i class="fa-solid fa-icons"></i>
+                <h3>Acciones claras</h3>
+                <p>Font Awesome convierte botones, redes, categorias y estados en senales faciles de leer.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="tool-card">
+                <i class="fa-solid fa-book-open"></i>
+                <h3>Consultar dudas</h3>
+                <p>MDN, Can I Use y la documentacion oficial te ayudan a confirmar como se usa cada cosa.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band" id="fonts">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Google Fonts</p>
+            <h2>Tipografias que cambian la personalidad del sitio</h2>
+            <p>Una misma pagina puede sentirse deportiva, elegante, tecnica o cercana solo por la fuente que usas.</p>
+          </div>
+
+          <div class="font-showcase">
+            <div class="font-panel title-font">
+              <span>Barlow Condensed</span>
+              <h3>TEAM ROCKY</h3>
+              <p>Ideal para titulos grandes, banners, secciones deportivas, numeros y frases de alto impacto.</p>
+              <div class="sample-row">
+                <strong>600</strong>
+                <strong class="weight-700">700</strong>
+                <strong class="weight-800">800</strong>
+              </div>
+            </div>
+            <div class="font-panel body-font">
+              <span>Poppins</span>
+              <h3>Texto claro para leer y navegar</h3>
+              <p>
+                Sirve para parrafos, botones, cards, menus, formularios y cualquier contenido que deba sentirse moderno
+                sin perder legibilidad.
+              </p>
+              <div class="sample-row">
+                <button class="btn btn-dark">Boton</button>
+                <button class="btn btn-outline-dark">Secundario</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band accent" id="bootstrap">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Bootstrap 5.3</p>
+            <h2>Componentes y estructura sin empezar desde cero</h2>
+            <p>Bootstrap aporta una base lista para armar interfaces ordenadas, adaptables y consistentes.</p>
+          </div>
+
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-5">
+              <div class="demo-window h-100">
+                <div class="demo-window-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="demo-navbar">
+                  <strong>Rocky</strong>
+                  <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Equipo</a>
+                    <a href="#">Contacto</a>
+                  </nav>
+                </div>
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="metric-box">
+                      <i class="fa-solid fa-users"></i>
+                      <strong>24</strong>
+                      <span>Integrantes</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="metric-box">
+                      <i class="fa-solid fa-trophy"></i>
+                      <strong>8</strong>
+                      <span>Eventos</span>
+                    </div>
+                  </div>
+                </div>
+                <form class="demo-form">
+                  <label class="form-label" for="correo">Formulario</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                    <input class="form-control" id="correo" type="email" placeholder="tu@email.com">
+                    <button class="btn btn-primary" type="button">Enviar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="feature-grid">
+                <article>
+                  <i class="fa-solid fa-border-all"></i>
+                  <h3>Grid responsive</h3>
+                  <p>Divide el contenido en columnas que se acomodan en celular, tablet y escritorio.</p>
+                </article>
+                <article>
+                  <i class="fa-solid fa-bars"></i>
+                  <h3>Navbar</h3>
+                  <p>Crea menus que colapsan en mobile sin tener que programar toda la logica desde cero.</p>
+                </article>
+                <article>
+                  <i class="fa-solid fa-square-check"></i>
+                  <h3>Botones y formularios</h3>
+                  <p>Da estilos consistentes a inputs, grupos, labels, alertas, estados y llamadas a la accion.</p>
+                </article>
+                <article>
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  <h3>Utilidades CSS</h3>
+                  <p>Clases como d-flex, gap-3, mt-5 o text-center aceleran ajustes de espacio y alineacion.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band" id="icons">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Font Awesome</p>
+            <h2>Iconos para explicar acciones sin llenar de texto</h2>
+            <p>Los iconos ayudan a identificar categorias, botones, redes sociales, logros y estados.</p>
+          </div>
+
+          <div class="icon-lab">
+            <button class="icon-action" type="button" aria-label="Bicicleta">
+              <i class="fa-solid fa-bicycle"></i>
+              <span>Actividad</span>
+            </button>
+            <button class="icon-action" type="button" aria-label="Medalla">
+              <i class="fa-solid fa-medal"></i>
+              <span>Logros</span>
+            </button>
+            <button class="icon-action" type="button" aria-label="Calendario">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>Eventos</span>
+            </button>
+            <button class="icon-action" type="button" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+              <span>Codigo</span>
+            </button>
+            <button class="icon-action" type="button" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Redes</span>
+            </button>
+            <button class="icon-action" type="button" aria-label="Ubicacion">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Lugar</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band accent" id="referencias">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Recursos extra</p>
+            <h2>Referencias para resolver dudas mientras construyes</h2>
+          </div>
+
+          <div class="resource-list">
+            <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-bootstrap"></i>
+              <span>Documentacion Bootstrap</span>
+            </a>
+            <a href="https://fontawesome.com/docs" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-flag"></i>
+              <span>Documentacion Font Awesome</span>
+            </a>
+            <a href="https://developer.mozilla.org/" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-code"></i>
+              <span>MDN Web Docs</span>
+            </a>
+            <a href="https://caniuse.com/" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-globe"></i>
+              <span>Can I Use</span>
+            </a>
+            <a href="https://animate.style/" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Animate.css</span>
+            </a>
+            <a href="https://icons.getbootstrap.com/" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-bootstrap"></i>
+              <span>Bootstrap Icons</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>Pagina demo creada para visualizar usos practicos de librerias web.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
